@@ -1,0 +1,5 @@
+<template>
+  <ToggleTheme />
+
+  <LoginForm />
+</template>
