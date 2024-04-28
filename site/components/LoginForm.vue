@@ -15,8 +15,22 @@ const form = reactive({
 });
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
-  // Do something with data
-  console.log(event.data.email, event.data.password);
+  const { email, password } = event.data;
+
+  const formData = new URLSearchParams();
+  formData.append("username", email);
+  formData.append("password", password);
+
+  const response = await $fetch("http://localhost:8000/api/auth/jwt/login", {
+    method: "POST",
+    headers: {
+      accept: "application/json",
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: formData.toString(),
+  });
+
+  console.log(response);
 }
 </script>
 
