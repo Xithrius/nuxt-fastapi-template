@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "template-site",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,6 +14,8 @@
     "nuxt": "^3.11.2",
     "vue": "^3.4.25",
     "vue-router": "^4.3.2",
-    "zod": "^3.23.4"
+    "zod": "^3.23.4",
+    "axios": "^1.6.8",
+    "@iconify-json/simple-icons": "^1.1.100"
   }
 }
